@@ -1,9 +1,24 @@
 {
   "name": "@befdev/gpse-search-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
+  "license": "MIT",
+  "description": "A Model Context Protocol (MCP) server that provides web search via Google Programmable Search Engine and page content extraction.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/befprg/gpse-search-mcp"
+  },
+  "homepage": "https://github.com/befprg/gpse-search-mcp",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-search",
+    "search",
+    "playwright",
+    "ai-agent"
+  ],
   "bin": {
-    "gpse-search-mcp": "./dist/index.js"
+    "gpse-search-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsup",

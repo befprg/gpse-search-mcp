@@ -2,6 +2,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { chromium, Browser, BrowserContext } from 'playwright';
 import { z } from 'zod';
+import pkg from './package.json' assert { type: 'json' };
 import { extractSearchResults, extractPageText, SearchResult } from './src/extraction';
 
 const CX = process.argv[2];
@@ -52,8 +53,8 @@ process.on('SIGTERM', () => shutdown().then(() => process.exit(0)));
 // --- Server setup ---
 
 const server = new McpServer({
-  name: 'gpse-search-mcp',
-  version: '1.0.0',
+  name: pkg.name,
+  version: pkg.version,
 });
 
 // Tool: search
